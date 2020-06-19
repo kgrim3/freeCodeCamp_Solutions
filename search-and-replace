@@ -1,0 +1,27 @@
+function myReplace(str, before, after) {
+  let wordArr = str.split(" ");
+  let origStr = str;
+  let afterSplit = after.split("");
+  
+  function isFirstCap(word) {
+    if (word.match(/^[^A-Z]/)) {
+      return false;
+    }
+    return true;
+  }
+
+  if (isFirstCap(before)) {
+      afterSplit[0] = afterSplit[0].toUpperCase();
+      after = afterSplit.join("");
+  }  
+
+  for (let i = 0; i < wordArr.length; i++) {
+  if (before === wordArr[i]) {
+           origStr = origStr.replace(before, after);
+         }
+  }
+  return origStr;
+}
+
+myReplace("A quick brown fox jumped over the lazy dog", "Jumped", "leaped");
+/* replace a word in a sentence (before) with a replacement (aftrer). preserve the case of the first letter of the replaced word */
