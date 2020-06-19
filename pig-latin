@@ -1,0 +1,18 @@
+function translatePigLatin(str) {
+  let newStr = str;
+  if (newStr[0].match(/[aeiou]/gi)) {
+    newStr =  newStr + "way";
+  } 
+  else if (newStr.match(/[aeiou]/gi) === null) {
+    newStr = newStr + "ay";
+  }
+  else {
+    let firstVowel = newStr.indexOf(newStr.match(/[aeiou]/)[0])
+    newStr = newStr.substr(firstVowel)+newStr.substr(0,firstVowel)+ "ay";
+  }
+  return newStr;
+}
+translatePigLatin("consonant");
+/* translate the string into "pig latin". if the string starts with a vowel add "way" to the end of the string. 
+   if there are no vowel in the string add "ay". if the string starts with a consonant add the first group of consonants before 
+   the first vowel and add it to the end of the string followed by "ay" */
