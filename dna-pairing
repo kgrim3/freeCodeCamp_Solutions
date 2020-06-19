@@ -1,0 +1,24 @@
+function pairElement(str) {
+  let results = [];
+  for (let i=0; i < str.length; i++) {
+    switch (str.charAt(i)) {
+      case "A":
+        results.push(["A","T"]); 
+        break;
+      case "T":
+        results.push(["T","A"]); 
+        break;
+      case "C":
+        results.push(["C","G"]); 
+        break;
+      case "G":
+        results.push(["G","C"]); 
+        break;
+    }
+  }
+  console.log(results);
+  return results;
+}
+
+pairElement("GCG");
+//pair each character of the given string with its assigned pair (AT/TA, CG/GC). return a two-dimensional array for the results
