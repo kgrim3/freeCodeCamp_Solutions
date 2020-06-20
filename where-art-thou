@@ -1,0 +1,20 @@
+function whatIsInAName(collection, source) {
+  let keys = Object.keys(source);
+  var arr = [];
+  // Only change code below this line
+  return collection.filter(function(item){
+    for (let i = 0; i < keys.length; i++) {
+      if(!item.hasOwnProperty(keys[i]) || item[keys[i]] !== source[keys[i]]) {
+        return false;
+      }       
+    }
+    return true;
+  });
+  // Only change code above this line
+  
+ 
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+
+// if the property of the object given (source) matches one of the properties of the objects in the collection return true if not return false
