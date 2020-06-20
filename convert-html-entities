@@ -1,0 +1,27 @@
+function convertHTML(str) {
+  let newStr = str.split("");
+  for (let i=0; i < str.length; i++) {
+    if (newStr[i] === "&") {
+      newStr[i] = "&amp;";
+    }
+    if (newStr[i] === "<") {
+      newStr[i] = "&lt;";
+    }
+    if (newStr[i] === ">") {
+      newStr[i] = "&gt;";
+    }
+    if (newStr[i] === "\"") {
+      newStr[i] = "&quot;";
+    }
+    if (newStr[i] === "'") {
+      newStr[i] = "&apos;";
+    }
+  }
+  console.log(newStr);
+  newStr = newStr.join("");
+  return newStr;
+}
+
+
+convertHTML("Dolce & Gabbana");
+// search the given string (str) for an non-alphanumeric symbol that would not translate into HTML (&<>"') and replace it with the proper code
