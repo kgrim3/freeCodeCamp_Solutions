@@ -1,0 +1,17 @@
+function uniteUnique(arr) {
+  let result = [];
+  for(let i=0; i < arguments.length; i++) {
+    let args = arguments[i];
+      for(let k=0; k < args.length; k++) {
+        console.log(result.indexOf(args[k]))
+        if(result.indexOf(args[k]) < 0) {
+          result.push(args[k]);
+        }
+      }
+  }
+  console.log(result);
+  return result;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+// take any number of arrays and return an array containing each unique number (no repeats) in each array
