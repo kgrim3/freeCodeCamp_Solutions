@@ -1,0 +1,28 @@
+function sumFibs(num) {
+  var result = 0;
+  var fibArr = [0];
+  var x = 0;
+  var y = 1;
+  while(y <= num) {
+    fibArr.push(y);
+    y += x;
+    x = y - x;
+    }
+ console.log(fibArr);
+  fibArr = fibArr.filter(function(item) {
+    if (item % 2 !== 0) {
+      return item;
+    }
+  });
+  console.log(fibArr);
+  for (var k = 0; k < fibArr.length; k++) {
+      if (fibArr[k]% 2 != 0) {
+      
+      result = result + fibArr[k];
+    }
+  }
+  return result;
+}
+
+sumFibs(75025);
+// sum all the odd numbers in the fibonacci sequence less than or equal to the given number (num)
