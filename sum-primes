@@ -1,0 +1,19 @@
+function sumPrimes(num) {
+  let result = 0;
+  function isPrime(num) {
+  for(let i = 2; i < num; i++)
+    if(num % i === 0) return false;
+  return num > 1;
+  }
+  
+  for(let k = 1; k <= num; k++) {
+    if (isPrime(k) === true) {
+      result += k;
+    }
+  } 
+  
+  return result;
+}
+
+sumPrimes(10);
+// sum all prime number less than or equal to the given number (num)
