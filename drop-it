@@ -1,0 +1,17 @@
+function dropElements(arr, func) {
+  let newArr = arr;
+  let length = arr.length;
+  for(let i = 0; i < length; i++) {
+    if (func(newArr[0]) === true) {
+      break;
+    }
+    else {
+      newArr.shift();
+    }
+  }
+  console.log(newArr);
+  return newArr;
+}
+
+dropElements([1, 2, 3], function(n) {return n < 3; });
+// remove the elements that return false with the given function until an element returns true then stop
