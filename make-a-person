@@ -1,0 +1,29 @@
+var Person = function(firstAndLast) {
+  // Complete the method below and implement the others similarly
+  let full = firstAndLast;
+
+
+  this.getFullName = function() {
+    return full;
+  };
+  this.getFirstName = function() {
+    return full.split(" ")[0];
+  }
+  this.getLastName = function() {
+    return full.split(" ")[1];
+  }
+  this.setFirstName = function(first) {
+    full = first + " " + full.split(" ")[1];  
+  }
+  this.setLastName = function(last) {
+    full = full.split(" ")[0] + " " + last;
+  }
+  this.setFullName = function(firstAndLast) {
+    full = firstAndLast;
+  }
+  return firstAndLast;
+};
+
+var bob = new Person('Bob Ross');
+bob.getFullName();
+// create the get and set methods in this constructor of an object
