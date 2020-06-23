@@ -1,0 +1,19 @@
+function binaryAgent(str) {
+  let result = 0;
+  let newStr = str.split(" ");
+  //console.log(newStr);
+  for (let i = 0; i < newStr.length; i++) {
+    newStr[i] = parseInt(newStr[i], 2);
+    }
+
+  for (let i = 0; i < newStr.length; i++) {
+    newStr[i] = String.fromCharCode(newStr[i]);
+    }
+  console.log(newStr);
+  newStr = newStr.join("");
+  console.log(newStr);
+  return newStr;
+}
+
+binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+// convert the string of binary numbers into english
